@@ -49,6 +49,18 @@ module.exports = {
       test.done();
     });
   },
+  'parse commented json files' : function ( test ) {
+    test.expect( 6 );
+    jsonFm.parseFile( __dirname + '/data/test-commented-json.md', function ( err, data ) {
+      test.ok( data.body, 'Body should be returned' );
+      test.ok( data.attributes.title === 'Some Title' );
+      test.ok( data.attributes.tags[2] === 'scissors' );
+      test.ok( data.attributes.id === 1001 );
+      test.ok( data.attributes.nested.attr1[2] === 'c' );
+      test.ok( data.attributes.nested.attr3[2] === 'i' );
+      test.done();
+    });
+  },
   'parse files invalid' : function ( test ) {
     test.expect( 3 );
     jsonFm.parseFile( 'path/doesnt/exist', function ( err, data ) {

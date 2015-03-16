@@ -30,7 +30,7 @@ console.log( out.attributes.array ) // [ 1, 2, 3 ]
 
 ### File Example
 
-See [./tests/data/test.md](https://raw.github.com/jsantell/node-json-front-matter/master/tests/data/test.md) for example of JSON Front Matter in a markdown file. The outer JSON is encapsulated via triple curly brackets. `{{{ "tags" : [ 'rock', 'paper', 'scissors' ] }}}`
+See [./tests/data/test.md](https://raw.github.com/jsantell/node-json-front-matter/master/tests/data/test.md) or [./tests/data/test-commented-json.md](https://raw.github.com/jsantell/node-json-front-matter/master/tests/data/test-commented-json.md) for example of JSON Front Matter in a markdown file. The outer JSON is encapsulated via triple curly brackets. `{{{ "tags" : [ 'rock', 'paper', 'scissors' ] }}}`, which can optionally be wrapped in HTML comments `<!-- {{{ "tags" : [ 'rock', 'paper', 'scissors' ] }}} -->`
 
 ### Testing
 
